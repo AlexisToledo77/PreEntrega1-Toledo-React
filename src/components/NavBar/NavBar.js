@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget/CartWidget.js";
 const NavBar = () => {
     return (
         <nav>
-            <h3>Ecommerce</h3>
+            <h3>REDELUCES</h3>
             <div>
                 <button>Inicio</button>
                 <button>Productos</button>
