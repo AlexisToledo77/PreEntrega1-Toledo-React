@@ -26,4 +26,6 @@ const Item = ({id, name, img, price, stock}) => {
         </article>
     )
 }
+
+export default Item
 //ver comillas de ITEM/$ID

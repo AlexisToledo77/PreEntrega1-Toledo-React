@@ -1,7 +1,8 @@
 import './App.css';
 import  NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
-import ItemCount from './components/ItemCount/ItemCount.js';
+// import ItemCount from './components/ItemCount/ItemCount.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
