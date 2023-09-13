@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     return (
-        <article className="CardItem">
+        <article className="cardDetail">
             <header className='header'>
                 <h2 className='ItemHeader'>
                     {name}
@@ -29,3 +29,5 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
         </article>
     )
 }
+
+export default ItemDetail

@@ -1,4 +1,5 @@
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = ({id, name, img, price, stock}) => {
 
@@ -21,11 +22,10 @@ const Item = ({id, name, img, price, stock}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-                <link to={`/item/${id}`} className='Option'>Ver detalle</link>
+                <Link to={`/item/${id}`} className='Option'>Ver detalle</Link>
             </footer>
         </article>
     )
 }
 
 export default Item
-//ver comillas de ITEM/$ID
