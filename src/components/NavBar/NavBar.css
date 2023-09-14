@@ -1,15 +1,24 @@
 .nav {
     background-color: #2e2e2ed7;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    
     font-family: 'Titillium Web', sans-serif;
+}
+
+.Categories {
+    font-size: 30px;
+    color: #fff;
+    justify-content: space-evenly;
+    margin-top: 2.7rem;
 }
 .title {
     font-size: 50px;
     color: #fff;
     animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) .8s both;
+    align-items: center;
 }
+
 .buttons {
     display: flex;
     justify-content: center;
