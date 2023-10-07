@@ -11,7 +11,7 @@ const NavBar = () => {
                 <NavLink to={`/category/Guirnaldas`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}> Guirnaldas </NavLink>
                 <NavLink to={`/category/cartelesNeonAcrilico`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}> Neon Acrilico </NavLink>
             </div>
-            <CartWidget />
+            <NavLink><CartWidget /> </NavLink>
         </nav>
     )
 }
