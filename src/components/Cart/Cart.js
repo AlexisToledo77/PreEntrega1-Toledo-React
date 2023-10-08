@@ -25,16 +25,5 @@ const Cart = () => {
     </div>
     )
 }
-        
-
-//     return (
-//         <div>
-//             { cart.map(item => <CartItem key={item.id} {...item}/>) }
-//             <h3>Total: ${total}</h3>
-//             <button onClick={() => clearCart()} className='Button'>Limpiar Carrito</button>
-//             <Link to='/checkout' className='Option'>Proceder al Pago</Link>
-//         </div>
-//     )
-// }
 
 export default Cart

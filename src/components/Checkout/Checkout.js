@@ -28,44 +28,44 @@ const Checkout = () => {
             }
             const ventas = collection(db, "orders");
             addDoc(ventas,order)
-            .then((res)=>{
+            .then((res)=> {
                 setOrderId(res.id)
                 clear()
             })
             .catch((error)=> console.log(error))
           }
-    }
+        }
 
     return (
         <div>
-            {orderId !== ""
+            {orderId !== ''
             ?<div>
                 <h2>Felicitaciones tu orden fue generada</h2>
-                <h5>Si Numero de orden es: {orderId} </h5>
+                <h5>Su Numero de orden es: {orderId} </h5>
             </div>
               :<div>
-              <h2> Terminar Compra</h2>
-              <h5>Por Favor completar sus datos</h5>
-              <form onSubmit={finalizarCompra}>
-                  <div className='mb-3'>
-                      <label className='form-label'> Nombre Completo</label>
-                      <input className='form-control' onChange={datosComprador} type='text' placeholder='Nombre y Apellido' name='name'/>
-                  </div>
-                  <div className='mb-3'>
-                      <label className='form-label'> Numero de Telefono</label>
-                      <input className='form-control' onChange={datosComprador} type='number' placeholder='+54911111111' name='telefono'/>
-                  </div>
-                  <div className='mb-3'>
-                      <label className='form-label'> E-mail</label>
-                      <input className='form-control' onChange={datosComprador} type='email' placeholder='redeluces@gmail.com' name='mail'/>
-                  </div>
-                  <div className='mb-3'>
-                      <label className='form-label'> Repita su Email</label>
-                      <input className='form-control' type='email' placeholder='redeluces@gmail.com' name='valid mail' onChange={((e)=>setValidateemail(e.target.value))}/>
-                  </div>
-                  <button className='btn btn-dark' type='submit' disabled={valiteEmail !== user.mail}>Generar Orden</button>
-              </form>
-          </div>  
+                <h2> Terminar Compra</h2>
+                <h5>Por Favor completar sus datos</h5>
+                <form onSubmit={finalizarCompra}>
+                    <div className='mb-3'>
+                        <label className='form-label'> Nombre Completo</label>
+                        <input className='form-control' onChange={datosComprador} type='text' placeholder='Nombre y Apellido' name='name'/>
+                    </div>
+                    <div className='mb-3'>
+                        <label className='form-label'> Numero de Telefono</label>
+                        <input className='form-control' onChange={datosComprador} type='number' placeholder='+54911111111' name='telefono'/>
+                    </div>
+                    <div className='mb-3'>
+                        <label className='form-label'> E-mail</label>
+                        <input className='form-control' onChange={datosComprador} type='email' placeholder='redeluces@gmail.com' name='mail'/>
+                    </div>
+                    <div className='mb-3'>
+                        <label className='form-label'> Repita su Email</label>
+                        <input className='form-control' type='email' placeholder='redeluces@gmail.com' name='valid mail' onChange={((e)=>setValidateemail(e.target.value))}/>
+                    </div>
+                    <button className='btn btn-dark' type='submit' disabled={valiteEmail !== user.mail}>Generar Orden</button>
+                </form>
+            </div>  
           }
         </div>
     )

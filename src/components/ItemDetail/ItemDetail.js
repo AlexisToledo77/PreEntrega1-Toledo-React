@@ -39,7 +39,6 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                 <p className="info">
                     Precio: ${price}
                 </p>
-                <button Link to='/'> Seguir comprando</button>
             </section>
             <footer className='ItemFooter'>{
                     quantityAdded > 0 ? (

@@ -11,15 +11,6 @@ const ItemDetailContainer = () => {
     const [loader, setLoeader] =useState(false)
     const { itemId } = useParams()
 
-    // useEffect(() => {
-    //     getProductsById(itemId)
-    //     .then(response => {
-    //         setProducts(response)
-    //     })
-    //     .catch(error => {
-    //         console.error(error)
-    //     })
-    // }, [itemId])
     useEffect(()=>{
         setLoeader(true)
         const collectionProd = collection(db, "productos")

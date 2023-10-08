@@ -11,18 +11,6 @@ const ItemListContainer = ({ greeting }) =>{
     const [loading, setLoading]= useState(false)
     const { categoryId } = useParams()
 
-    // useEffect(() => {
-    //     const asyncFunc = categoryId ? getProductsByCategory : getProducts
-
-    //     asyncFunc(categoryId)
-    //         .then(response => {
-    //             setProducts(response)
-    //         })
-    //         .catch(error => {
-    //             console.error(error)
-    //         })
-    // }, [categoryId])
-
     useEffect(()=>{
         setLoading(true)
         const coleccionProductos = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)):collection(db, "productos")
