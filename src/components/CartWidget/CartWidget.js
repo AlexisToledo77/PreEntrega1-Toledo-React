@@ -1,18 +1,25 @@
 import './CartWidget.css'
-import cart from './assets/cart.svg'
-import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import React, { useContext } from 'react'
+import { BsCart4 } from 'react-icons/bs'
+import { Badge } from 'bootstrap-4-react'
+import { CartContext } from '../../context/CartContext' 
 import { Link } from 'react-router-dom'
 
-const CartWidget = () => {
-    const { totalQuantity } = useContext(CartContext)
 
+const CartWidget = () => {
+    const { cartQuantity } = useContext(CartContext)
+  
     return (
-        <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none'}}>
-            <img scr={cart} alt='carrito' className='imgCarrito'/>
-            0
+      <div>
+        <Link to="/cart">
+          <BsCart4 fontSize={'2rem'} color="black" />
         </Link>
+        {cartQuantity() > 0 && (
+          <Badge bg='danger'>{cartQuantity()}</Badge>
+        )}
+      </div>
     )
-}
+  }
+
 
 export default CartWidget
